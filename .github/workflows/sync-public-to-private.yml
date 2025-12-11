@@ -30,34 +30,63 @@ jobs:
           if [ -z "${{ secrets.PRIVATE_REPO_TOKEN }}" ]; then
             echo "❌ Error: PRIVATE_REPO_TOKEN secret is not set!"
             exit 1
+          else
+            echo "✅ Secret found (length: ${#PRIVATE_REPO_TOKEN})"
+            echo "Token starts with: ${PRIVATE_REPO_TOKEN:0:7}..."
+            echo "Testing token with GitHub API..."
+            API_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.PRIVATE_REPO_TOKEN }}" https://api.github.com/repos/plus-hub/plushub-private 2>&1)
+            if echo "$API_RESPONSE" | grep -q '"name": "plushub-private"'; then
+              echo "✅ Token can access private repo via API"
+            else
+              echo "❌ Token cannot access private repo via API"
+              echo "API Response: $API_RESPONSE"
+              exit 1
+            fi
           fi
-          API_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.PRIVATE_REPO_TOKEN }}" https://api.github.com/repos/plus-hub/plushub-private 2>&1)
-          echo "$API_RESPONSE" | grep -q '"name": "plushub-private"' || { echo "❌ Token cannot access plushub-private"; exit 1; }
+        env:
+          PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
 
-      - name: Add private remote
+      - name: Configure Git Credential Helper
+        run: |
+          git config --global --unset-all credential.helper || true
+          git config --local --unset-all http.https://github.com/.extraheader || true
+          echo "✅ Using explicit token in URLs (no credential helper)"
+
+      - name: Add private repo as remote
         run: |
           git remote add private https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git \
             || git remote set-url private https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git
-          GIT_TERMINAL_PROMPT=0 git fetch private main || true
+          git remote -v
 
-      - name: Update only docs in private repo (preserves all other files)
+      - name: Fetch from private repo
+        run: |
+          GIT_TERMINAL_PROMPT=0 git fetch https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git main \
+            || echo "⚠️  Private repo fetch failed - might be first sync or empty repo"
+
+      - name: Update only docs in private repo
         run: |
           set -e
-          if git ls-remote --heads private main | grep -q main; then
+          # Base on private/main to preserve everything
+          if git ls-remote --heads https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git main | grep -q main; then
             git checkout -B sync-branch FETCH_HEAD
           else
             git checkout --orphan sync-branch
+            rm -rf ./* 2>/dev/null || true
+            git reset
           fi
 
-          # Copy only allowed files from public
-          git checkout origin/main -- README.md CONTRIBUTING.md 2>/dev/null || true
-          git checkout origin/main -- docs/*.md docs/**/*.md 2>/dev/null || true
-          git checkout origin/main -- docs/public/assets 2>/dev/null || true
+          # Enumerate and copy only allowed files from public
+          git ls-tree -r --name-only origin/main | \
+            grep -E '^(README\.md|CONTRIBUTING\.md|docs/.*\.md|docs/public/assets/)' | \
+            while read -r path; do
+              mkdir -p "$(dirname "$path")"
+              git show origin/main:"$path" > "$path"
+            done
 
           # Stage only those paths
-          git add README.md CONTRIBUTING.md 2>/dev/null || true
-          git add docs/*.md docs/**/*.md 2>/dev/null || true
-          git add docs/public/assets 2>/dev/null || true
+          git add README.md 2>/dev/null || true
+          git add CONTRIBUTING.md 2>/dev/null || true
+          git add docs 2>/dev/null || true
 
           echo "Files staged:"
           git diff --cached --name-only || true
@@ -70,11 +99,12 @@ jobs:
 
       - name: Push to private repo
         run: |
-          GIT_TERMINAL_PROMPT=0 git push private sync-branch:main
+          echo "Pushing to private repo..."
+          GIT_TERMINAL_PROMPT=0 git push https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git sync-branch:main
         env:
           GIT_TERMINAL_PROMPT: 0
 
       - name: Cleanup
         run: |
-          git checkout main || true
-          git branch -D sync-branch || true
+          git checkout main
+          git branch -D sync-branch
