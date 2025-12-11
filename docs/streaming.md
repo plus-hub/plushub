@@ -18,6 +18,7 @@ Stream, download, torrent and binge all your favourite movies and shows!
 * ⭐ **[CineHD](https://cinehd.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Primeshows](https://primeshows.live/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.com/invite/t2PnzRgKeM)
 * ⭐ **[Auto Embed](https://watch.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
+* * ⭐ **[xEmbed](https://watch.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
 
 ***
 
