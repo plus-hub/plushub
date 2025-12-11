@@ -1,0 +1,114 @@
+name: Sync Public Repo to Private Repo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.md'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Verify secret exists
+        run: |
+          if [ -z "${{ secrets.PRIVATE_REPO_TOKEN }}" ]; then
+            echo "❌ Error: PRIVATE_REPO_TOKEN secret is not set!"
+            exit 1
+          else
+            echo "✅ Secret found (length: ${#PRIVATE_REPO_TOKEN})"
+            echo "Token starts with: ${PRIVATE_REPO_TOKEN:0:7}..."
+            echo "Testing token with GitHub API..."
+            API_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.PRIVATE_REPO_TOKEN }}" https://api.github.com/repos/plus-hub/plushub-private 2>&1)
+            if echo "$API_RESPONSE" | grep -q '"name": "plushub-private"'; then
+              echo "✅ Token can access private repo via API"
+            else
+              echo "❌ Token cannot access private repo via API"
+              echo "API Response: $API_RESPONSE"
+            fi
+          fi
+        env:
+          PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
+
+      - name: Configure Git Credential Helper
+        run: |
+          git config --global --unset-all credential.helper || true
+          git config --local --unset-all http.https://github.com/.extraheader || true
+          echo "✅ Using explicit token in URLs (no credential helper)"
+
+      - name: Add private repo as remote
+        run: |
+          git remote add private https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git \
+            || git remote set-url private https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git
+          git remote -v
+
+      - name: Fetch from private repo
+        run: |
+          GIT_TERMINAL_PROMPT=0 git fetch https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git main \
+            || echo "⚠️  Private repo fetch failed - might be first sync or empty repo"
+
+      - name: Update only docs in private repo
+        run: |
+          # Step 1: Checkout private/main as base (preserves ALL existing files)
+          # This ensures .vitepress/, package.json, and all other code files remain untouched
+          if git ls-remote --heads https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git main | grep -q main; then
+            git checkout -b sync-branch FETCH_HEAD
+            echo "✅ Using private/main as base - all existing files preserved"
+          else
+            git checkout --orphan sync-branch
+            echo "⚠️  Private repo is empty - starting fresh"
+          fi
+          
+          # Step 2: Only override/update specific files from public repo
+          # Files that exist in private but NOT in public will remain unchanged
+          # Files that exist in both will be updated with public version
+          # Files that exist only in public will be added
+          echo "📝 Updating markdown files and public assets from public repo..."
+          git checkout origin/main -- README.md CONTRIBUTING.md 2>/dev/null || true
+          git checkout origin/main -- docs/*.md docs/**/*.md 2>/dev/null || true
+          git checkout origin/main -- docs/public/assets 2>/dev/null || true
+          
+          # Step 3: Stage only the files we want to update (not all files)
+          # This ensures we don't accidentally delete or modify other files
+          git add README.md CONTRIBUTING.md 2>/dev/null || true
+          git add docs/*.md docs/**/*.md 2>/dev/null || true
+          git add docs/public/assets 2>/dev/null || true
+          
+          # Step 4: Verify what will be changed (for debugging)
+          echo "📋 Files that will be updated:"
+          git diff --cached --name-only || echo "No changes"
+          
+          # Step 5: Commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync: Update docs from public repo"
+            echo "✅ Committed changes"
+          else
+            echo "ℹ️  No changes to commit - files are already in sync"
+          fi
+
+      - name: Push to private repo
+        run: |
+          echo "Pushing to private repo..."
+          GIT_TERMINAL_PROMPT=0 git push https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/plus-hub/plushub-private.git sync-branch:main
+        env:
+          GIT_TERMINAL_PROMPT: 0
+
+      - name: Cleanup
+        run: |
+          git checkout main
+          git branch -D sync-branch
