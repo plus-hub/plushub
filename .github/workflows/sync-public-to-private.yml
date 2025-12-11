@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'docs/**/*.md'
+      - 'docs/public/assets/**'
       - 'README.md'
       - 'CONTRIBUTING.md'
   workflow_dispatch:
@@ -80,7 +81,7 @@ jobs:
             grep -E '^(README\.md|CONTRIBUTING\.md|docs/.*\.md|docs/public/assets/)' | \
             while read -r path; do
               mkdir -p "$(dirname "$path")"
-              git show origin/main:"$path" > "$path"
+              git show origin/main:"$path" > "$path" 2>/dev/null || echo "⚠️  Could not copy: $path"
             done
 
           # Deletions: remove docs/*.md and docs/public/assets files that no longer exist in public
@@ -91,7 +92,15 @@ jobs:
             fi
           done
 
+          # Handle deletions in docs/public/assets/ (images, etc.)
           for f in $(git ls-tree -r --name-only HEAD | grep -E '^docs/public/assets/' || true); do
+            if ! git cat-file -e origin/main:"$f" 2>/dev/null; then
+              git rm -f "$f" || true
+            fi
+          done
+          
+          # Also handle image files directly in docs/ if any (though they should be in public/assets/)
+          for f in $(git ls-tree -r --name-only HEAD | grep -E '^docs/.*\.(png|jpg|jpeg|gif|svg|webp|ico)$' || true); do
             if ! git cat-file -e origin/main:"$f" 2>/dev/null; then
               git rm -f "$f" || true
             fi
