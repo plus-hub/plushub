@@ -18,8 +18,11 @@ Stream, download, torrent and binge all your favourite movies and shows!
 * ⭐ **[CineHD](https://cinehd.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Primeshows](https://primeshows.live/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.com/invite/t2PnzRgKeM)
 * ⭐ **[FlixFree](https://www.flixfree.online/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://t.me/flixfreeonline)
-* ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://hivflix.cc/) / [Discord](https://discord.com/invite/33yA574vvd)
 * ⭐ **[Auto Embed](https://watch.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
+* ⭐ **[CineAura](https://cineaura.app/)** - Movies / TV / Anime / [Discord](https://discord.com/invite/FYu4krX3JG)
+* ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://hivflix.cc/) / [Discord](https://discord.com/invite/33yA574vvd)
+
+
 
 ***
 
