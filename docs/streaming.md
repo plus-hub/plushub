@@ -20,7 +20,7 @@ Stream, download, torrent and binge all your favourite movies and shows!
 * ⭐ **[FlixFree](https://www.flixfree.online/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://t.me/flixfreeonline)
 * ⭐ **[Auto Embed](https://watch.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
 * ⭐ **[CineAura](https://cineaura.app/)** - Movies / TV / Anime / [Discord](https://discord.com/invite/FYu4krX3JG)
-* ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://hivflix.cc/) / [Discord](https://discord.com/invite/33yA574vvd)
+* ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / [Telegram](https://hivflix.cc/) / [Discord](https://discord.com/invite/33yA574vvd)
 
 
 
