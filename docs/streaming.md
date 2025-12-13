@@ -15,6 +15,12 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / [Telegram](https://t.me/hivflix) / [Discord](https://discord.com/invite/33yA574vvd)
 
 
+## Embeds Platform
+
+* ⭐ **[VidPlus](https://vidplus.to)** - Movies / TV / Anime / [Discord](https://discord.gg/gPxgZzbHDK)
+* ⭐ **[Auto Embed](https://autoembed.cc)** - Movies / TV / [Discord](https://discord.gg/P2u7dtVD6k)
+
+
 ## Anime Streaming
 
 * 🌐 **[Wotaku](https://wotaku.wiki/websites)** / [Discord](https://discord.gg/vShRGx8ZBC) / [GitHub](https://github.com/wotakumoe/Wotaku), [The Index](https://theindex.moe/library/anime) / [Wiki](https://thewiki.moe/) / [Discord](https://discord.gg/Snackbox) or [EverythingMoe](https://everythingmoe.com/), [2](https://everythingmoe.org/) / [Subreddit](https://www.reddit.com/r/everythingmoe/) / [Discord](https://discord.gg/GuueaDgKdS) - Anime Site Indexes
