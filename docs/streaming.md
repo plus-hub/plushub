@@ -5,8 +5,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 ---
 ## Streaming Sites
 
-***
-
 * ⭐ **[Vidbox](https://vidbox.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Hotflix](https://hotflix.su/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[CineHD](https://cinehd.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
@@ -17,9 +15,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / [Telegram](https://t.me/hivflix) / [Discord](https://discord.com/invite/33yA574vvd)
 
 
-***
-
-
 ## Anime Streaming
 
 * 🌐 **[Wotaku](https://wotaku.wiki/websites)** / [Discord](https://discord.gg/vShRGx8ZBC) / [GitHub](https://github.com/wotakumoe/Wotaku), [The Index](https://theindex.moe/library/anime) / [Wiki](https://thewiki.moe/) / [Discord](https://discord.gg/Snackbox) or [EverythingMoe](https://everythingmoe.com/), [2](https://everythingmoe.org/) / [Subreddit](https://www.reddit.com/r/everythingmoe/) / [Discord](https://discord.gg/GuueaDgKdS) - Anime Site Indexes
@@ -28,7 +23,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[HiAnime](https://hianime.to/)**, [2](https://hianime.nz/), [3](https://hianime.sx/), [4](https://hianime.bz/), [5](https://hianime.pe/) - Sub / Dub / Auto-Next / [Subreddit](https://reddit.com/r/HiAnimeZone/) / [Telegram](https://t.me/HiAnimeLobby) / [Discord](https://discord.gg/hianime)
 * ⭐ **HiAnime Resources** - [Official Mirrors](https://hianime.tv/) / [Enhancements](https://greasyfork.org/en/scripts/506340) / [Auto-Focus](https://greasyfork.org/en/scripts/506891)
 
-***
 
 ## Cartoon Streaming
 
@@ -42,11 +36,8 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * [ToonTales](https://www.toontales.net/) - Classic / TV
 * [SuperCartoons](https://www.supercartoons.net/) - Classic / TV
 
-***
 
 ## TV Streaming
-
-***
 
 * ⭐ **[Best Series](https://bstsrs.in/)**, [2](https://topsrs.day/), [3](https://srstop.link/) - TV / Anime / 3rd Party Hosts
 * ⭐ **[NOXX](https://noxx.to/)** - TV / 3rd Party Hosts
@@ -56,7 +47,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * [Adult Swim](https://www.adultswim.com/videos/) - Full Adult Swim Episodes
 * [⁠DisneyNOW](https://disneynow.com/) - Full Disney Episodes / US Only
 
-***
 
 ## Drama Streaming
 
@@ -72,9 +62,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * [Dramacool.sr](https://www12.dramacool.sr/) - TV / Movies
 * [Dramacool9](https://dramacools9.cam/) - TV / Movies
 
-***
-
-# ► Live TV / Sports
 
 ## Live TV
 
@@ -85,7 +72,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[EasyWebTV](https://zhangboheng.github.io/Easy-Web-TV-M3u8/routes/countries.html)** or [IPTV Web](https://iptv-web.app/) - TV / Sports
 * ⭐ **[DaddyLive TV](https://dlhd.dad/24-7-channels.php)**, [2](https://dlhd.dad/), [3](https://thedaddy.dad/), - TV / [Mirrors](https://daddyny.com/)
 
-***
 
 ## Live Sports
 
@@ -97,8 +83,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[DaddyLive](https://dlhd.dad/)**, [2](https://dlhd.dad/), [3](https://thedaddy.dad/), [4](https://dlhd.click/), [5](https://daddylivestream.com/) - TV / Sports / [Mirrors](https://daddyny.com/)
 
 
-***
-
 ## IPTV Tools
 
 * 🌐 **[Awesome IPTV](https://github.com/iptv-org/awesome-iptv)** - IPTV Resources
@@ -107,7 +91,6 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[IPTVNator](https://github.com/4gray/iptvnator)** - IPTV Player / [Web App](https://iptvnator.vercel.app) / [Telegram](https://t.me/iptvnator) / [GitHub](https://github.com/4gray/iptvnator)
 * ⭐ **[Open TV](https://github.com/fredolx/open-tv)** - IPTV Player
 
-***
 
 ## Smart TV / Firestick
 
@@ -115,22 +98,17 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[TizenTube](https://tizentube.6513006.xyz/)** - Ad-Free Samsung Smart TV YouTube / [GitHub](https://github.com/reisxd/TizenTube), [2](https://github.com/reisxd/TizenBrew)
 * ⭐ **[webOS Homebrew](https://www.webosbrew.org/)** - LG TV Homebrew / [Guide](https://wispydocs.pages.dev/lg-tv-homebrew/) / [Discord](https://discord.gg/xWqRVEm) / [GitHub](https://github.com/webosbrew/)
 
-***
 
 ## Android TV
 
 * 🌐 **[Awesome Android TV](https://github.com/Generator/Awesome-Android-TV-FOSS-Apps)** or **[⁠TroyPoint](https://troypoint.com/)** - Android TV App Indexes
 * ⭐ **[⁠TizenTube Cobalt](https://github.com/reisxd/TizenTubeCobalt)** or [SmartTube](https://github.com/yuliskov/SmartTube) / [2](https://smarttubeapp.github.io/) - Ad-Free Android TV / Firestick YouTube
 
-***
 
 ## ► [Android Streaming]
 
-***
 
 ## ► [iOS Streaming]
-
-***
 
 
 ---
