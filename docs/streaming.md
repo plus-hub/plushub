@@ -1,8 +1,6 @@
----
 title: Movies / TV / Anime - Free Streaming & Download Guide | PLUS HUB
 description: Stream, download, and torrent your favorite movies, TV shows, and anime for free. Discover the best free streaming platforms, download sources, and media players. Complete guide to free entertainment.
 keywords: free movies, free tv shows, free anime, streaming sites, download movies, watch tv shows online, anime streaming, free entertainment, movie downloads, tv series download
----
 ## Streaming Sites
 
 ***
