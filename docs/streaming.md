@@ -111,13 +111,13 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 * ⭐ **[⁠TizenTube Cobalt](https://github.com/reisxd/TizenTubeCobalt)** or [SmartTube](https://github.com/yuliskov/SmartTube) / [2](https://smarttubeapp.github.io/) - Ad-Free Android TV / Firestick YouTube
 
 
-## ► [Android Streaming]
+## Android Streaming
 
 * ⭐ **[CineHD](https://cinehd.xyz/)** - Movies / TV / Anime / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Nxsha](https://nxsha.app/)** - Movies / TV / [Telegram](http://t.me/+n2HBTPjpUsViNmNl)
 
 
-## ► [iOS Streaming]
+## IOS Streaming
 
 * ⭐ **[Nxsha](https://nxsha.app/)** - Movies / TV / [Telegram](http://t.me/+n2HBTPjpUsViNmNl)
 
