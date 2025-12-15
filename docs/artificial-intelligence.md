@@ -195,7 +195,8 @@ keywords: artificial intelligence, ai tools, chatgpt alternatives, machine learn
 * [Tensor Trust](https://tensortrust.ai/) / [GitHub](https://github.com/HumanCompatibleAI/tensor-trust) or [Gandalf](https://gandalf.lakera.ai/) / [GitHub](https://github.com/lakeraai) - Prompting Skill Games
 * [Gobble Bot](https://gobble.bot/) - Generate Text Files for Chatbots
 
-# ► AI Indexes
+
+# AI Indexes
 
 * ⭐ **[⁠LLM Explorer](https://llm-explorer.com/)** or [LifeArchitect](https://lifearchitect.ai/models-table/) - LLM Databases / Indexes
 * ⭐ **[FutureTools](https://www.futuretools.io/?pricing-model=free)** - AI Directory / [Discord](https://discord.gg/WBk4ZDW6A9)
