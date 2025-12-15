@@ -4,8 +4,6 @@ description: Explore the world of AI and machine learning. Discover free AI tool
 keywords: artificial intelligence, ai tools, chatgpt alternatives, machine learning, ai image generation, free ai, open source ai, ml resources, ai models, deep learning
 ---
 
-# AI Chatbots
-
 ## Official Model Sites
 
 * ⭐ **[AI Studio](https://aistudio.google.com/app/prompts/new_chat)** - Gemini 3 Pro / 100 Daily / Sign-Up Required / [Subreddit](https://www.reddit.com/r/Bard/) / [Discord](https://discord.com/invite/gemini)
