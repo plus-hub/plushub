@@ -4,7 +4,7 @@ description: Learn how to block ads, trackers, and protect your privacy online. 
 keywords: ad blocker, privacy tools, vpn, ublock origin, adguard, privacy browser, tracker blocker, online privacy, browser security, ad blocking
 ---
 
-# ► Adblocking
+## ▷ Adblocking
 
 ***
 
