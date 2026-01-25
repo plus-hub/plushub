@@ -7,11 +7,11 @@ keywords: free movies, free tv shows, free anime, streaming sites, download movi
 
 * ⭐ **[Vidbox](https://vidbox.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Braflix](https://braflix.me)** - Movies / TV / Anime / Auto-Next
+* ⭐ **[Auto Embed](https://watch-v2.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
 * ⭐ **[Hotflix](https://hotflix.su/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[CineHD](https://cinehd.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/VGQKGPM9Ej)
 * ⭐ **[Primeshows](https://primeshows.live/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.com/invite/t2PnzRgKeM)
 * ⭐ **[FlixFree](https://www.flixfree.online/)** - Movies / TV / Anime / Auto-Next / [Telegram](https://t.me/flixfreeonline)
-* ⭐ **[Auto Embed](https://watch.autoembed.cc/)** - Movies / TV / Anime / Auto-Next / [Discord](https://discord.gg/P2u7dtVD6k)
 * ⭐ **[CineAura](https://cineaura.app/)** - Movies / TV / Anime / [Discord](https://discord.com/invite/FYu4krX3JG)
 * ⭐ **[HivFlix](https://hivflix.cc/)** - Movies / TV / Anime / [Telegram](https://t.me/hivflix) / [Discord](https://discord.com/invite/33yA574vvd)
 
